@@ -2,8 +2,11 @@
  * GET /
  * Home page.
  */
-exports.index = (req, res) => {
+exports.getCreateQr = (req, res) => {
+  const unknownUser = !(req.user);
+
   res.render('create-qr', {
-    title: 'Create QR'
+    title: 'Create QR',
+    unknownUser,
   });
 };

@@ -31,12 +31,20 @@ describe('GET /api', () => {
       .get('/api')
       .expect(200, done);
   });
-});
+}); 
 
 describe('GET /contact', () => {
   it('should return 200 OK', (done) => {
     request(app)
       .get('/contact')
+      .expect(200, done);
+  });
+});
+
+describe('GET /create-qr', () => {
+  it('should return 200 OK', (done) => {
+    request(app)
+      .get('/create-qr')
       .expect(200, done);
   });
 });
