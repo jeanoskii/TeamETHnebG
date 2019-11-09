@@ -13,4 +13,4 @@
 <code>node app.js</code>
 <br>
 <br>
-<p>Note: Boilerplate cloned from <a href="github.com/sahat/hackathon-starter">github.com/sahat/hackathon-starter</a>
+<p>Note: Boilerplate cloned from <a href="http://github.com/sahat/hackathon-starter" target="_blank">github.com/sahat/hackathon-starter</a>
