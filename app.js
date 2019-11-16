@@ -33,10 +33,11 @@ const homeController = require('./controllers/home');
 const userController = require('./controllers/user');
 const apiController = require('./controllers/api');
 const createQrController = require('./controllers/create-qr');
+const scanQrController = require('./controllers/scan-qr');
 const contactController = require('./controllers/contact');
 
 /**
- * API keys and Passport configuration.
+ * API keys and Passport configuration. 
  */
 const passportConfig = require('./config/passport');
 
@@ -141,6 +142,10 @@ app.get('/contact', contactController.getContact);
 app.post('/contact', contactController.postContact);
 
 app.get('/create-qr', createQrController.getCreateQr);
+//app.post('/create-qr', createQrController.postCreateQr);
+
+app.get('/scan-qr', scanQrController.getScanQr);
+//app.post('/scan-qr', scanQrController.postScanQr);
 
 app.get('/account/verify', passportConfig.isAuthenticated, userController.getVerifyEmail);
 app.get('/account/verify/:token', passportConfig.isAuthenticated, userController.getVerifyEmailToken);

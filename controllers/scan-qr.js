@@ -2,21 +2,20 @@ const validator = require('validator');
 const nodemailer = require('nodemailer');
 
 /**
- * GET /create-qr
- * Create QR page.
+ * GET /scan-qr
+ * Scan QR page.
  */
-
- exports.getCreateQr = (req, res) => {
+exports.getScanQr = (req, res) => {
   const unknownUser = !(req.user);
 
-  res.render('create-qr', {
-    title: 'Create QR',
+  res.render('scan-qr', {
+    title: 'Scan QR',
     unknownUser,
   });
 };
 
 /**
- * POST /create-qr
+ * POST /scan-qr
  * Send a contact form via Nodemailer.
  */
 
