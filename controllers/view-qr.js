@@ -1,6 +1,7 @@
 const validator = require('validator');
 const nodemailer = require('nodemailer');
 const qrCode = require('qrcode');
+const fs = require('fs');
 
 /**
  * GET /view-qr
@@ -14,11 +15,26 @@ exports.getViewQr = (req, res) => {
     unknownUser,
   });
 
-  //let canvas = req.body.canvas;
+
+  run().catch(error => console.error(error.stack));
+
+  async function run() {
+    const res = await qrCode.toDataURL('http://asyncawait.net');
+
+    fs.writeFileSync('./qr.html', `<img src="${res}">`);
+    console.log('Wrote to ./qr.html');
+  }
   
+  //let canvas = res.body.canvas;
+
   qrCode.toString('I am a pony!',{type:'terminal'}, function (err, url) {
     console.log(url)
-  }); 
+  });
+/*
+  qrCode.toDataURL('I am a pony!', function (err, url) {
+    console.log(url)
+  });
+  */
 };
 
 
@@ -27,7 +43,7 @@ exports.getViewQr = (req, res) => {
  * Send a contact form via Nodemailer.
  */
 
-/** 
+ /**
   exports.postViewQr = (req, res) => {
     let canvas;
     canvas = req.body.canvas;
@@ -35,6 +51,7 @@ exports.getViewQr = (req, res) => {
     qrCode.toCanvas(canvas, 'sample text', function (error) {
       if (error) console.error(error)
       console.log('success!');
-    })
+    });
+    return res.redirect("/view-qr");
      
-};*/
+}; */
