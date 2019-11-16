@@ -16,7 +16,7 @@ exports.getViewQr = (req, res) => {
   });
 
 
-  run().catch(error => console.error(error.stack));
+/*  run().catch(error => console.error(error.stack));
 
   async function run() {
     const res = await qrCode.toDataURL('http://asyncawait.net');
@@ -24,7 +24,7 @@ exports.getViewQr = (req, res) => {
     fs.writeFileSync('./qr.html', `<img src="${res}">`);
     console.log('Wrote to ./qr.html');
   }
-  
+  */
   //let canvas = res.body.canvas;
 
   qrCode.toString('I am a pony!',{type:'terminal'}, function (err, url) {

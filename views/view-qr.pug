@@ -9,6 +9,9 @@ block content
     id='canvas', 
     name='canvas',
   )
+  script(src="~/node_modules/qrcode/build/qrcode.min.js")
+  
+  -  QRCode.toCanvas(document.getElementById("canvas"), "sample text", function (error) {});
 
   form(method='POST')
     input(type='hidden', name='_csrf', value=_csrf)
