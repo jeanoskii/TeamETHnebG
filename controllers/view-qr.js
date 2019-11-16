@@ -14,7 +14,11 @@ exports.getViewQr = (req, res) => {
     title: 'View QR',
     unknownUser,
   });
-
+  qrCode.toCanvas('sample text', function (err, canvas) {
+    if (err) throw err
+    var container = res.body.container;
+    container.appendChild(canvas)
+  });
 
 /*  run().catch(error => console.error(error.stack));
 

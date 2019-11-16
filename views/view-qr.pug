@@ -5,14 +5,12 @@ block content
   .pb-2.mt-2.mb-4.border-bottom
     h3 View QR
 
-  canvas(
-    id='canvas', 
-    name='canvas',
-  )
-  script(src="~/node_modules/qrcode/build/qrcode.min.js")
+  div(id='container')
+    canvas(
+      id='canvas', 
+      name='canvas',
+    )
   
-  -  QRCode.toCanvas(document.getElementById("canvas"), "sample text", function (error) {});
-
   form(method='POST')
     input(type='hidden', name='_csrf', value=_csrf)
     if (unknownUser)
