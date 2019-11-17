@@ -6,16 +6,16 @@ block content
     h3 View QR
 
   div(id='container')
-    canvas(
-      id='canvas', 
-      name='canvas',
+    img(
+      src='/qr1.png'
     )
   
-  form(method='POST')
-    input(type='hidden', name='_csrf', value=_csrf)
-    if (unknownUser)
-    .form-group
-      .offset-md-2.col-md-8.p-1
-        button.btn.btn-primary(type='submit')
-          i.far.fa-envelope.fa-sm
-          | Generate
+  //-
+    form(method='POST')
+      input(type='hidden', name='_csrf', value=_csrf)
+      if (unknownUser)
+      .form-group
+        .offset-md-2.col-md-8.p-1
+          button.btn.btn-primary(type='submit')
+            i.far.fa-envelope.fa-sm
+            | Generate

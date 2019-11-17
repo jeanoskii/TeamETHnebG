@@ -1,7 +1,7 @@
 const validator = require('validator');
 const nodemailer = require('nodemailer');
 const qrCode = require('qrcode');
-const fs = require('fs');
+//const fs = require('fs');
 
 /**
  * GET /view-qr
@@ -14,11 +14,12 @@ exports.getViewQr = (req, res) => {
     title: 'View QR',
     unknownUser,
   });
-  qrCode.toCanvas('sample text', function (err, canvas) {
+  
+  /* qrCode.toCanvas('sample text', function (err, canvas) {
     if (err) throw err
     var container = res.body.container;
     container.appendChild(canvas)
-  });
+  }); */
 
 /*  run().catch(error => console.error(error.stack));
 
@@ -31,9 +32,9 @@ exports.getViewQr = (req, res) => {
   */
   //let canvas = res.body.canvas;
 
-  qrCode.toString('I am a pony!',{type:'terminal'}, function (err, url) {
+  /* qrCode.toString('I am a pony!',{type:'terminal'}, function (err, url) {
     console.log(url)
-  });
+  }); */
 /*
   qrCode.toDataURL('I am a pony!', function (err, url) {
     console.log(url)
