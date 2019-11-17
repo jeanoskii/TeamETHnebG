@@ -1,27 +1,29 @@
 extends layout
 
+
 block content
-  h1 Digiploma
-  p.lead Diploma on the blockchain.
+  style.
+    .jumbotron {
+      background: linear-gradient(330deg, rgba(225, 225, 225, 0.05) 0%, rgba(225, 225, 225, 0.05) 33.333%,rgba(114, 114, 114, 0.05) 33.333%, rgba(114, 114, 114, 0.05) 66.666%,rgba(52, 52, 52, 0.05) 66.666%, rgba(52, 52, 52, 0.05) 99.999%),linear-gradient(66deg, rgba(181, 181, 181, 0.05) 0%, rgba(181, 181, 181, 0.05) 33.333%,rgba(27, 27, 27, 0.05) 33.333%, rgba(27, 27, 27, 0.05) 66.666%,rgba(251, 251, 251, 0.05) 66.666%, rgba(251, 251, 251, 0.05) 99.999%),linear-gradient(225deg, rgba(98, 98, 98, 0.05) 0%, rgba(98, 98, 98, 0.05) 33.333%,rgba(222, 222, 222, 0.05) 33.333%, rgba(222, 222, 222, 0.05) 66.666%,rgba(228, 228, 228, 0.05) 66.666%, rgba(228, 228, 228, 0.05) 99.999%),linear-gradient(90deg, rgb(28, 20, 63),rgb(40, 160, 253)) !important;
+    }
+
+  div.jumbotron
+    h1.text-light Digiploma
+    p.lead.text-light Diploma on the blockchain.
   
   .row
-    .col-md-6
-      h2 Digital
-      p Paper-based diplomas are a thing of the past. Enjoy the convenience of eletronic documents with Digiploma.
-      p 
-        a.btn.btn-raised(href='#', role='button') View details »
     .col-md-6
       h2 Portable
       p Forgot where you put your diploma? With Digiploma, all you need is a QR code to get instant access to your digital diploma, anywhere at any time.
       p
-        a.btn.btn-raised(href='#', role='button') View details »
     .col-md-6
-      h2 Secure
+      h2 Efficient
+      p Quick turn-over of diplomas from registrar to the graduate. Reduce the processing period from months to just days with Digiploma!
+      p 
+    .col-md-6
+      h2 Reliable
       p Digiplomas are stored in a distributed ledger, also known as blockchain. It is immutable and fault-tolerant, providing up to 100% security and availability.
-      p
-        a.btn.btn-raised(href='#', role='button') View details »
     .col-md-6
       h2 Authentic
-      p Using Proof of Authority, new entries to the ledger must be checked by validators. Only verified diplomas are stored in the blockchain, ensuring authenticity and eliminating forgery.
-      p
-        a.btn.btn-raised(href='#', role='button') View details »
+      p New entries to the ledger must be checked by validators. Only verified diplomas are stored in the blockchain, ensuring authenticity and eliminating forgery.
+    

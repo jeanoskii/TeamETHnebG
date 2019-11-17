@@ -5,7 +5,7 @@ block content
     h3 Create QR
   
   div(id='container')
-    form(action='/view-qr')
+    form(action='/qr1.png', target='_blank')
       .form-group.row
         label(class='col-md-2 col-form-label font-weight-bold', for='fname') First Name
         .col-md-8
@@ -46,7 +46,6 @@ block content
       .form-group
         .offset-md-2.col-md-8.p-1
           button.btn.btn-primary(type='submit')
-            i.far.fa-envelope.fa-sm
             | Create
 
   //-

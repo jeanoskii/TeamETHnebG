@@ -6,6 +6,26 @@ block content
   form(id='signup-form', method='POST')
     input(type='hidden', name='_csrf', value=_csrf)
     .form-group.row
+      h5.col-md-12.font-weight-bold School Details
+    .form-group.row
+      label.col-md-3.col-form-label.font-weight-bold.text-right(for='schoolName') Name
+      .col-md-7
+        input.form-control(type='text', name='schoolName', id='schoolName', placeholder='School Name', autocomplete='schoolName', required)
+    .form-group.row
+      label.col-md-3.col-form-label.font-weight-bold.text-right(for='schoolAddress') Address
+      .col-md-7
+        input.form-control(type='text', name='schoolAddress', id='schoolAddress', placeholder='School Address', autocomplete='schoolAddress', required)
+    .form-group.row
+      label.col-md-3.col-form-label.font-weight-bold.text-right(for='schoolID') ID Number
+      .col-md-7
+        input.form-control(type='text', name='schoolID', id='schoolID', placeholder='School ID Number', autocomplete='schoolID', required, min='10000', max='69999')
+    .form-group.row
+      h5.col-md-12.font-weight-bold Registrar Details
+    .form-group.row
+      label.col-md-3.col-form-label.font-weight-bold.text-right(for='regName') Name
+      .col-md-7
+        input.form-control(type='text', name='regName', id='regName', placeholder='Registrar Name', autocomplete='regName', required)
+    .form-group.row
       label.col-md-3.col-form-label.font-weight-bold.text-right(for='email') Email
       .col-md-7
         input.form-control(type='email', name='email', id='email', placeholder='Email', autofocus, autocomplete='email', required)

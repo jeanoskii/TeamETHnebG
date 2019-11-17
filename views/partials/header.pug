@@ -10,10 +10,9 @@
       ul.nav.navbar-nav
         li.nav-item(class=(title === 'Home') ? 'active' : undefined)
           a.nav-link(href='/') Home
-        //- li.nav-item(class=(title === 'API Examples') ? 'active' : undefined)
-          a.nav-link(href='/api') API Examples
-        li.nav-item(class=(title === 'Create QR') ? 'active' : undefined)
-          a.nav-link(href='/create-qr') Create QR
+        if user
+          li.nav-item(class=(title === 'Create QR') ? 'active' : undefined)
+            a.nav-link(href='/create-qr') Create QR
         li.nav-item(class=(title === 'Scan QR') ? 'active' : undefined)
           a.nav-link(href='/scan-qr') Scan QR
         li.nav-item(class=(title === 'View QR') ? 'active' : undefined)
