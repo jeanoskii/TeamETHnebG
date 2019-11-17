@@ -5,17 +5,15 @@ block content
   .pb-2.mt-2.mb-4.border-bottom
     h3 View QR
 
-  div(id='container')
-    img(
-      src='/qr1.png'
-    )
   
-  //-
-    form(method='POST')
-      input(type='hidden', name='_csrf', value=_csrf)
-      if (unknownUser)
-      .form-group
-        .offset-md-2.col-md-8.p-1
-          button.btn.btn-primary(type='submit')
-            i.far.fa-envelope.fa-sm
-            | Generate
+  form(action='/qr1.png', target='_blank')
+    input(type='hidden', name='_csrf', value=_csrf)
+    .form-group.row
+      label(class='col-md-2 col-form-label font-weight-bold', for='idnum') ID Number
+      .col-md-8
+        input.form-control(type='text', name='idnum', id='idnum', autocomplete='idnum', autofocus=true)
+    .form-group
+      .offset-md-2.col-md-8.p-1
+        button.btn.btn-primary(type='submit')
+          i.far.fa-envelope.fa-sm
+          | Submit
