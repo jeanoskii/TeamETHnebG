@@ -5,19 +5,49 @@ block content
     h3 Create QR
   
   div(id='container')
-    .form-group.row
-      label(class='col-md-2 col-form-label font-weight-bold', for='name') Name
-      .col-md-8
-        input.form-control(type='text', name='name', id='name', autocomplete='name', autofocus=true)
-    .form-group.row
-      label(class='col-md-2 col-form-label font-weight-bold', for='email') Email
-      .col-md-8
-        input.form-control(type='text', name='email', id='email', autocomplete='email')
-    .form-group
-      .offset-md-2.col-md-8.p-1
-        button.btn.btn-primary(type='submit')
-          i.far.fa-envelope.fa-sm
-          | Send
+    form(action='/view-qr')
+      .form-group.row
+        label(class='col-md-2 col-form-label font-weight-bold', for='fname') First Name
+        .col-md-8
+          input.form-control(type='text', name='fname', id='fname', autocomplete='fname', autofocus=true)
+      .form-group.row
+        label(class='col-md-2 col-form-label font-weight-bold', for='mname') Middle Name
+        .col-md-8
+          input.form-control(type='text', name='mname', id='mname', autocomplete='mname', autofocus=true)
+      .form-group.row
+        label(class='col-md-2 col-form-label font-weight-bold', for='lname') Last Name
+        .col-md-8
+          input.form-control(type='text', name='lname', id='lname', autocomplete='lname', autofocus=true)
+      .form-group.row
+        label(class='col-md-2 col-form-label font-weight-bold', for='degree') Degree
+        .col-md-8
+          select.form-control(name='degree', id='degree', autocomplete='degree', autofocus=true)
+            option(value='Bachelor of Science in Tourism Management') BSTM
+            option(value='Bachelor of Science in Business Administration') BSBA
+            option(value='Bachelor of Science in Accounting Information System') BSAIS
+            option(value='Bachelor of Arts in Communication') BACOMM
+            option(value='Bachelor of Science in Hospitality Management') BSHM 
+            option(value='Bachelor of Multimedia Arts') BMMA 
+            option(value='Bachelor of Science in Computer Science') BSCS 
+            option(value='Bachelor of Science in Information Technology') BSIT 
+            option(value='Bachelor of Science in Computer Engineering') BSCpE 
+      .form-group.row
+        label(class='col-md-2 col-form-label font-weight-bold', for='sonum') Special Order No.
+        .col-md-8
+          input.form-control(type='text', name='sonum', id='sonum', autocomplete='sonum', autofocus=true)
+      .form-group.row
+        label(class='col-md-2 col-form-label font-weight-bold', for='place') Place
+        .col-md-8
+          input.form-control(type='text', name='place', id='place', autocomplete='place', autofocus=true)
+      .form-group.row
+        label(class='col-md-2 col-form-label font-weight-bold', for='Date') Date
+        .col-md-8
+          input.form-control(type='date', name='date', id='date', autocomplete='email')
+      .form-group
+        .offset-md-2.col-md-8.p-1
+          button.btn.btn-primary(type='submit')
+            i.far.fa-envelope.fa-sm
+            | Create
 
   //-
     form(method='POST')
